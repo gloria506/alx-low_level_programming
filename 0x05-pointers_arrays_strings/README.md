@@ -1,1 +1,1 @@
-projrct description
+project description
