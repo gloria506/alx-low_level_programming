@@ -2,7 +2,7 @@
 /**
   *main - Entry point
   *Description: 'print alphabet in lower case and then in uppercase'
-  *returns: 0 to the operating system upon successful completion
+  *Returns: always 0
   */
 int main(void)
 {
@@ -17,7 +17,7 @@ int main(void)
 	while (m <= 90)
 	{
 		putchar(m);
-		n++;
+		m++;
 	}
 	putchar('\n');
 	return (0);
