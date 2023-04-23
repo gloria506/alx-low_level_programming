@@ -1,23 +1,25 @@
 #include <stdio.h>
+
 /**
-  *main - Entry point
-  *Description: print alphabet in lower case and then in uppercase
-  *Returns: always 0
-  */
+ *main - Entry point
+ *Description: printing in lower and uppercase alphabet
+ *Return: Always 0
+ */
+
 int main(void)
 {
-	int n = 97;
-	int m = 65;
+	int x = 97;
+	int y = 65;
 
-	while (n <= 122)
+	while (x <= 122)
 	{
-		putchar(n);
-		n++;
+		putchar(x);
+		x++;
 	}
-	while (m <= 90)
+	while (y <= 90)
 	{
-		putchar(m);
-		m++;
+		putchar(y);
+		y++;
 	}
 	putchar('\n');
 	return (0);
