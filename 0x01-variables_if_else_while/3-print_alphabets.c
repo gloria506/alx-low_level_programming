@@ -4,7 +4,8 @@
   *Description: 'print alphabet in lower case and then in uppercase'
   *returns: 0 to the operating system upon successful completion
   */
-int main(void){
+int main(void)
+{
 	int n = 97;
 	int m = 65;
 
