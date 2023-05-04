@@ -1,27 +1,23 @@
-#include "main.h"
+#include"main.h"
 
 /**
-  * rev_string - Entry point
-  * Description - 'printing a string in reverse, but in halves'
-  * @s: string to be reversed
-  * Return: void
-  */
+ * print_rev - prints a string in reverse
+ *
+ * @s: string parameter input
+ *
+ * Return: Nothing
+*/
 
-void rev_string(char *s)
+void print_rev(char *s)
 {
-	int length, h, half;
-	char tmp;
+	int index;
 
-	for (length = 0; s[length] != '\0'; length++)
+	/*finds the length of string without null character*/
+	for (index = 0; s[index] != '\0'; ++index)
 		;
-		h = 0;
-		half = length / 2;
 
-	while (half--)
-	{
-		tmp = s[length - h - 1];
-		s[length - h - 1] = s[h];
-		s[h] = tmp;
-		h++;
-	}
+	/*print char from the last index as you decrement*/
+	for (--index; index >= 0; --index)
+		_putchar(s[index]);
+	_putchar('\n');
 }
