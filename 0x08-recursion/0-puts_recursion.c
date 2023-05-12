@@ -1,20 +1,32 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
-  * _puts_recursion - Entry point
-  * Description - 'a function that prints a string, followed by a new line'
-  * @s: the char string type
-  * Return: void
-  */
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+    return (write(1, &c, 1));
+}
 
 void _puts_recursion(char *s)
 {
-	if (*s == '\0')
-	{
-		_putchar('\n');
-		return;
-	}
-	_putchar(*s);
-	_puts_recursion(s + 1);
+    if (*s == '\0') {
+        _putchar('\n');
+        return;
+    }
+    
+    _putchar(*s);
+    _puts_recursion(s + 1);
 }
+
+int main(void)
+{
+    _puts_recursion("Puts with recursion");
+    return 0;
+}
+
