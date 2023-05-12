@@ -1,45 +1,44 @@
+#include "main.h"
+
 /**
- * _sqrt_recursion_wrapper - a wrapper that does the recursion bit
- *
- * @n : input number
- * @min: minimum number to guess
- * @max: maximum number to guess
- *
- * Return: square root of @n or -1
-*/
-int _sqrt_recursion_wrapper(int n, int min, int max)
+  * help - Finds the natural sqaure root of the inputted number
+  * @n: the number to find the natural sqaure root of
+  * @h: root to be tested
+  *
+  * Return: If the number has a sqaure root - The sqaure root
+  *         If the number does not - -1
+  *
+  */
+
+int help(int n, int h)
 {
-	int guess, guess_squared;
+	if ((h * h) == n)
+		return (h);
 
-	guess = (min + max) / 2;		/*get guess (g)*/
-	guess_squared = guess * guess;		/*square guess (sg)*/
-
-	if (guess_squared == n)			/*if squared guess == n return guess*/
-		return (guess);
-	else if (min == max)			/*this means n doesn't have a perfect square*/
+	if (h == n / 2)
 		return (-1);
-	else if (guess_squared < n)		/*overshoot g if sg is less than the n*/
-		return (_sqrt_recursion_wrapper(n, guess + 1, max));
-	else					/*undershoot g if sg is more than the n*/
-		return (_sqrt_recursion_wrapper(n, min, guess - 1));
+
+	return (help(n, h + 1));
 }
 
 /**
- * _sqrt_recursion - a function that returns the natural
- *                   square root of a number
- *
- * @n: input number
- *
- * Return: square root
-*/
+  * _sqrt_recursion - Entry point
+  * Description - 'a function that returns the natural square root of a number'
+  * @n : the number to find natural sqaure root of
+  * Return: If number has sqaure root - The sqaure root
+  *         If number does not - -1
+  *
+  */
+
 int _sqrt_recursion(int n)
 {
-	if (n == 1)		/*sqrt(1) == 1*/
-		return (1);
-	else if (n == 0)	/*sqrt(0) == 0*/
-		return (0);
-	else if (n < 0)		/*sqrt(-n) == -1 (NA)*/
+	int h = 0;
+
+	if (n < 0)
 		return (-1);
-	else
-		return (_sqrt_recursion_wrapper(n, 1, n));
+
+	if (n == 1)
+		return (1);
+
+	return (help(n, h));
 }
