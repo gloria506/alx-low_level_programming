@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
   * _puts_recursion - Entry point
   * Description - 'a function that prints a string, followed by a new line'
