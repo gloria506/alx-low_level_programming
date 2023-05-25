@@ -2,12 +2,12 @@
 #include <stddef.h>
 
 /**
- * get_op_func - the Entry point
+ * get_op_func - Entry point
  * Description 'function that selects the correct function
  * to perform the operation asked by the user'
  * @s: the operator passed as argument given by the user
- 
- * Return: A pointer to the function that corresponds to the operator given as
+ *
+ * Return: a pointer to the function that corresponds to the operator given as
  * a parameter, or NULL if s does not match any of the 5 expected operators
  */
 
