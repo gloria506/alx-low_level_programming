@@ -5,7 +5,7 @@
   * Description - 'this appends text at the end of a file'
   * @filename: a pointer that points to the name of the file
   * @text_content: the string to be added to the file
-  * Return: this should return -1 if the function fails or filename is NULL, if the file
+  * Return: return -1 if the function fails or filename is NULL, if the file
   * does not exist, the user lacks write permissions -1, and 1 if otherwise
   */
 
