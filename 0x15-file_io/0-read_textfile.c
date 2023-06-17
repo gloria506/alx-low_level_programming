@@ -7,7 +7,7 @@
   *                POSIX standard output'
   * @filename: this is the file being read
   * @letters: the number of letters to be read and printed out
-  * Return:this should return  w, the actual number of bytes read and printed or
+  * Return:this should return w, the actual number of bytes read and printed or
   * 0 when the function fails or filename is 0
   */
 
